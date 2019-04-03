@@ -11,9 +11,7 @@ namespace XamarinUniverse.Mobile.Views
     {
         public MainPage()
         {
-            InitializeComponent();
-            //Application.Current.MainPage.DisplayAlert(Languages.Error, Languages.Error, Languages.Accept);
-
+            InitializeComponent();    
         }
     }
 }

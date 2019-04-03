@@ -106,6 +106,15 @@ namespace XamarinUniverse.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string Password {
@@ -124,7 +133,7 @@ namespace XamarinUniverse.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Remember.
+        ///   Looks up a localized string similar to Remember Me?.
         /// </summary>
         internal static string Remember {
             get {

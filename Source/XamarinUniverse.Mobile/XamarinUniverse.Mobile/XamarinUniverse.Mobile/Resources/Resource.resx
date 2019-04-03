@@ -132,6 +132,9 @@
   <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
@@ -139,6 +142,6 @@
     <value>Enter a Password</value>
   </data>
   <data name="Remember" xml:space="preserve">
-    <value>Remember</value>
+    <value>Remember Me?</value>
   </data>
 </root>

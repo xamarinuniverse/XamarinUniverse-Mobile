@@ -17,6 +17,8 @@ namespace XamarinUniverse.Mobile.Helpers
             DependencyService.Get<ILocalize>().SetLocale(ci);
         }
 
+        public static string Login => Resource.Login;
+
         public static string Accept => Resource.Accept;
 
         public static string Error => Resource.Error;
