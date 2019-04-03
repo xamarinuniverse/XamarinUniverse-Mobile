@@ -1,7 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinUniverse.Mobile.Helpers;
+using XamarinUniverse.Mobile.Models;
 using XamarinUniverse.Mobile.Services;
+using XamarinUniverse.Mobile.ViewModels;
 using XamarinUniverse.Mobile.Views;
 
 namespace XamarinUniverse.Mobile
@@ -14,6 +18,19 @@ namespace XamarinUniverse.Mobile
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
+
+            if (Settings.IsRemember)
+            {
+                var token = JsonConvert.DeserializeObject<TokenResponse>(Settings.Token);
+                if (token.Expiration > DateTime.Now)
+                {
+                    var mainViewModel = MainViewModel.GetInstance();
+                    mainViewModel.Token = token;
+
+                    MainPage = new MainPage();
+                    return;
+                }
+            }
             MainPage = new AppShell();
         }
 
