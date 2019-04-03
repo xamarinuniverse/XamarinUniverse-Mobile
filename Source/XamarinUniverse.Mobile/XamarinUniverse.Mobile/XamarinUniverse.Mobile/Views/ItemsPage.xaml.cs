@@ -13,7 +13,6 @@ using XamarinUniverse.Mobile.ViewModels;
 
 namespace XamarinUniverse.Mobile.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemsPage : ContentPage
     {
         ItemsViewModel viewModel;
