@@ -2,6 +2,7 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinUniverse.Mobile.Common;
 using XamarinUniverse.Mobile.Helpers;
 using XamarinUniverse.Mobile.Models;
 using XamarinUniverse.Mobile.Services;
@@ -31,7 +32,10 @@ namespace XamarinUniverse.Mobile
                 }
             }
 
-            MainPage = new LoginPage();
+            Bootstrapper.RegisterDependencies();
+
+            MainPage = new SplashScreen();
+           // MainPage = new LoginPage();
         }
 
         protected override void OnStart()
