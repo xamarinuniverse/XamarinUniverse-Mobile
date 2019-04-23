@@ -12,6 +12,7 @@ namespace XamarinUniverse.Mobile.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        public readonly ApiService ApiService;
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
 
         bool isBusy = false;
@@ -21,11 +22,23 @@ namespace XamarinUniverse.Mobile.ViewModels
             set { SetProperty(ref isBusy, value); }
         }
 
+        bool isEnabled = true;
+        public bool IsEnabled
+        {
+            get { return isEnabled; }
+            set { SetProperty(ref isEnabled, value); }
+        }
+
         string title = string.Empty;
         public string Title
         {
             get { return title; }
             set { SetProperty(ref title, value); }
+        }
+
+        public BaseViewModel()
+        {
+            ApiService = new ApiService();
         }
 
         protected bool SetProperty<T>(ref T backingStore, T value,

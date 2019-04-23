@@ -2,6 +2,7 @@
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinUniverse.Mobile.Helpers;
 
 namespace XamarinUniverse.Mobile.Views
 {
@@ -10,7 +11,7 @@ namespace XamarinUniverse.Mobile.Views
     {
         public MainPage()
         {
-            InitializeComponent();
+            InitializeComponent();    
         }
     }
 }

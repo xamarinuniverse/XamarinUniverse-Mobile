@@ -8,7 +8,6 @@ using XamarinUniverse.Mobile.Models;
 
 namespace XamarinUniverse.Mobile.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewItemPage : ContentPage
     {
         public Item Item { get; set; }
@@ -29,6 +28,11 @@ namespace XamarinUniverse.Mobile.Views
         async void Save_Clicked(object sender, EventArgs e)
         {
             MessagingCenter.Send(this, "AddItem", Item);
+            await Navigation.PopModalAsync();
+        }
+
+        async void Cancel_Clicked(object sender, EventArgs e)
+        {
             await Navigation.PopModalAsync();
         }
     }
