@@ -76,6 +76,9 @@
         <ShellSection Title="About" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
         </ShellSection>
+        <ShellSection Title="Post" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate local:PostsPage}" />
+        </ShellSection>
     </ShellItem>
 
     <!-- Optional Templates 

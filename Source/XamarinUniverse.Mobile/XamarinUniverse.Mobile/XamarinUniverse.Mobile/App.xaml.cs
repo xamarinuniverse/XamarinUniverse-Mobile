@@ -17,21 +17,22 @@ namespace XamarinUniverse.Mobile
         {
             InitializeComponent();
 
-            if (Settings.IsRemember)
-            {
-                DependencyService.Register<MockDataStore>();
-                var token = JsonConvert.DeserializeObject<TokenResponse>(Settings.Token);
-                if (token.Expiration > DateTime.Now)
-                {
-                    var mainViewModel = MainViewModel.GetInstance();
-                    mainViewModel.Token = token;
+            //Just in case we need a login, and on it, we set the remember setthings
+            //if (Settings.IsRemember)
+            //{
+            //    DependencyService.Register<MockDataStore>();
+            //    var token = JsonConvert.DeserializeObject<TokenResponse>(Settings.Token);
+            //    if (token.Expiration > DateTime.Now)
+            //    {
+            //        var mainViewModel = MainViewModel.GetInstance();
+            //        mainViewModel.Token = token;
 
-                    MainPage = new AppShell();// MainPage();
-                    return;
-                }
-            }
+            //        MainPage = new AppShell();// MainPage();
+            //        return;
+            //    }
+            //}
 
-            MainPage = new LoginPage();
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()
