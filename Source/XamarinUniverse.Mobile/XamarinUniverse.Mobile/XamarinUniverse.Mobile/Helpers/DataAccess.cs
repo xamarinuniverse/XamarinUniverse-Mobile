@@ -23,7 +23,7 @@
             var databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "xUniverse.db");
 
             this.connection = new SQLiteConnection(databasePath);
-            this.connection.CreateTable<Note>();
+            //this.connection.CreateTable<Note>();
             this.connection.CreateTable<Item>();
 
             //this.connection = new SQLiteConnection(

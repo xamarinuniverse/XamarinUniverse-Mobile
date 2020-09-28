@@ -12,9 +12,9 @@
                     <On Platform="iOS" Value="tab_feed.png"/>
                 </OnPlatform>
             </NavigationPage.Icon>
-            <x:Arguments>
+            <!--<x:Arguments>
                 <views:ItemsPage />
-            </x:Arguments>
+            </x:Arguments>-->
         </NavigationPage>
 
         <NavigationPage 
@@ -24,9 +24,9 @@
                     <On Platform="iOS" Value="tab_about.png"/>
                 </OnPlatform>
             </NavigationPage.Icon>
-            <x:Arguments>
+            <!--<x:Arguments>
                 <views:AboutPage />
-            </x:Arguments>
+            </x:Arguments>-->
         </NavigationPage>
         
         <NavigationPage 
@@ -36,9 +36,9 @@
                     <On Platform="iOS" Value="tab_about.png"/>
                 </OnPlatform>
             </NavigationPage.Icon>
-            <x:Arguments>
+            <!--<x:Arguments>
                 <views:PostsPage />
-            </x:Arguments>
+            </x:Arguments>-->
         </NavigationPage>
         
     </TabbedPage.Children>
